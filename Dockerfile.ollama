@@ -1,0 +1,6 @@
+FROM ollama/ollama:latest
+
+COPY ./entrypoint_ollama_llama3instruct.sh /usr/local/bin/entrypoint_ollama_llama3instruct.sh
+RUN chmod +x /usr/local/bin/entrypoint_ollama_llama3instruct.sh
+
+ENTRYPOINT ["ollama", "serve"]
